@@ -3,14 +3,15 @@ package cmd
 import (
 	"fmt"
 	"gcdd/db"
+
 	"github.com/spf13/cobra"
 )
 
 var deleteCmd = &cobra.Command{
 	Use:   "delete <alias_name>",
 	Short: "Delete an existing alias",
-	Long: "You can provide more than one space separated aliases and all the valid ones will be deleted",
-	Args: cobra.MinimumNArgs(1),
+	Long:  "You can provide more than one space separated aliases and all the valid ones will be deleted",
+	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("[Warning] Once deleted alias cannot be used later")
 		for _, arg := range args {
@@ -32,17 +33,3 @@ var deleteCmd = &cobra.Command{
 func init() {
 	RootCmd.AddCommand(deleteCmd)
 }
-
-// func isValidAlias(checkStr string) (bool, string) {
-// 	aliases, err := db.AllAliases()
-// 	if err != nil {
-// 		return false, ""
-// 	}
-// 	for _, alias := range aliases {
-// 		if alias.Name == checkStr {
-// 			return true, alias.Target
-// 		}
-// 	}
-
-// 	return false, ""
-// }
