@@ -8,20 +8,21 @@ There is also a `cdo` command that has the same fuctionality like `cdd` but will
 And the best part is that `cdd` also has the basic functionality of `cd`.
 
 You can understand how to use each command by using the `-h` flag for help
----
 
-### Installation instructions
+## Installation instructions
 
 1. `cd dist`
 2. `source ./install.sh`  
 
----
+## Demo
 
-### Note
+[![asciicast](https://asciinema.org/a/9gq2aq7BabZYz1G9B95RebSvG.svg)](https://asciinema.org/a/9gq2aq7BabZYz1G9B95RebSvG?autoplay=1&speed=2)
+
+## Note
 1. In the help section of the cli you might see help text for some commands with `gcdd` rather than `cdd` for now. This is because the main script is a wrapper around a CLI made in golang using cobra. That CLI uses the `gcdd` command as it's root command
 
-2. The `cdo` command might only work on gnome for now. You can trouble shoot this by editing the `cdo.sh` script slightly and use `xdg-open` instead of `nautilus` to open the filemanager
+2. The `cdo` command might only work on gnome for now. 
 
 ---
 
-_Suggestions, criticisms and comments of any type are always welcome. Feel free to reach out_
+_Suggestions, criticisms, comments and contributions of any type are always welcome. Feel free to reach out_
