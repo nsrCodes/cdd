@@ -14,6 +14,8 @@ You can understand how to use each command by using the `-h` flag for help
 1. `cd dist`
 2. `source ./install.sh`  
 
+> Note: currently only works with bash. Working on adding support for other terminals as well
+
 ## Demo
 
 [![asciicast](https://asciinema.org/a/9gq2aq7BabZYz1G9B95RebSvG.svg)](https://asciinema.org/a/9gq2aq7BabZYz1G9B95RebSvG?autoplay=1&speed=2)
