@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 SRC="./bin"
 mkdir -p $HOME/bin/cdd
 cp "${SRC}/cdd.sh" $HOME/bin/cdd
