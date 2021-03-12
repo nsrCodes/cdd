@@ -4,14 +4,14 @@ output_line_count=`echo "$GO_OUTPUT" | wc -l`
 
 if ! command -v xdg-open &>/dev/null ; 
 	then { 
-		printf "ERROR: The xdg-open command is not available in your \$PATH \\nIt is usually installed with the package xdg-utils \\n " ; 
-		exit 1 ; 
+		printf "The xdg-open command is not available in your \$PATH \\nIt is usually installed with the package xdg-utils \\n " ; 
 	} 
-fi
-
-if [[ output_line_count -lt 2 ]]; 
-then
-	xdg-open "$GO_OUTPUT"
-else
-	echo "$GO_OUTPUT"
+	else {
+		if [[ output_line_count -lt 2 ]]; 
+			then
+				nautilus "$GO_OUTPUT"
+			else
+				echo "$GO_OUTPUT"
+		fi
+	}
 fi
