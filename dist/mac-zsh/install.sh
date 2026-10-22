@@ -1,6 +1,6 @@
 #!/bin/zsh
 SRC="./bin"
-INSTALL_LOCAL="$HOME/bin/cdd"
+INSTALL_LOCAL="$HOME/cdd-bin/bin/cdd"
 mkdir -p $INSTALL_LOCAL
 cp "${SRC}/cdd.sh" $INSTALL_LOCAL
 cp "${SRC}/cdo.sh" $INSTALL_LOCAL
