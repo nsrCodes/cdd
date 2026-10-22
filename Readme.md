@@ -10,8 +10,19 @@ And the best part is that `cdd` also has the basic functionality of `cd`.
 ## Installation steps
 
 0. Clone the repo. Open a terminal at the cloned path.
-1. If you use zsh do `cd dist/mac-zsh` or on bash `cd dist/bash-linux`
-2. `. ./install.sh`  
+1. `. ./dist/install.sh`
+
+That detects your OS and CPU and runs the matching installer. Prebuilt binaries are in `dist/`:
+
+| Target | Directory | Shell |
+|---|---|---|
+| macOS Apple Silicon (M1 and later) | `dist/mac-arm64` | zsh |
+| macOS Intel | `dist/mac-intel` | zsh |
+| Linux x86-64 | `dist/linux-amd64` | bash |
+
+To pick one yourself, `cd` into its directory and run `. ./install.sh`. Everything installs into `~/bin/cdd` and adds aliases to your `~/.zshrc` or `~/.bashrc`.
+
+For any other platform, build the binary from `gcdd/` with `go build` and copy it into one of the `bin/` directories before installing.
 
 ## How to use
 You can use the `-h` to get info about the commands that you have, but here's the gist of it
